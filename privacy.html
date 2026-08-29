@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Политика конфиденциальности — Anviva</title>
+  <meta name="description" content="Политика конфиденциальности Anviva: обработка данных при использовании Google Workspace Add-on и OAuth.">
+  <link rel="canonical" href="https://anviva.ru/privacy.html">
+  <link rel="alternate" hreflang="ru" href="https://anviva.ru/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://anviva.ru/privacy-en.html">
+  <link rel="icon" href="assets/anviva-icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">К содержанию</a>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img class="brand__mark" src="assets/anviva-icon.svg" width="34" height="34" alt="">
+      <span class="brand__name">Anviva</span>
+    </a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="index.html">Главная</a>
+      <a href="privacy.html" aria-current="page">Конфиденциальность</a>
+      <a href="support.html">Поддержка</a>
+      <a href="privacy-en.html" lang="en" hreflang="en">EN</a>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <header class="page-hero">
+      <h1>Политика конфиденциальности</h1>
+      <p class="meta">Оператор: Anviva · Сайт: <a href="https://anviva.ru/">anviva.ru</a> · Обновлено: 29 августа 2026 г.</p>
+    </header>
+
+    <article class="prose">
+      <p>
+        Настоящая Политика описывает, какие данные обрабатываются при использовании
+        Google Workspace Editor Add-on <strong>Anviva</strong> (далее — «Сервис»)
+        и связанных страниц на сайте anviva.ru. Политика рассчитана на пользователей
+        Google Workspace Marketplace и сценарии OAuth-доступа к Google API.
+      </p>
+
+      <h2>1. Оператор</h2>
+      <p>
+        Оператором Сервиса является Anviva. По вопросам конфиденциальности и поддержки
+        пишите на электронную почту
+        <a href="mailto:mycasesexample@gmail.com">mycasesexample@gmail.com</a>
+        (домен anviva.ru).
+      </p>
+
+      <h2>2. Какие данные обрабатываются</h2>
+      <p>В зависимости от функций, которые вы используете, Сервис может обрабатывать:</p>
+      <ul>
+        <li><strong>Адрес электронной почты</strong> аккаунта Google, под которым вы авторизованы.</li>
+        <li><strong>Содержимое таблиц и документов</strong> Google Sheets / Google Docs / файлов Drive,
+          к которым вы явно предоставляете доступ Сервису (для генерации документов, чтения шаблонов,
+          масок, реестров и связанных настроек).</li>
+        <li><strong>Метаданные лицензии и пробного периода</strong> (статус, идентификаторы установки,
+          сроки действия, необходимые для проверки лицензии).</li>
+        <li><strong>Содержимое обращений в поддержку</strong>, которое вы отправляете через формы
+          add-on («Техподдержка», «Запросить лицензию»): например, название организации, текст сообщения,
+          при необходимости вложение (скриншот или фрагмент журнала).</li>
+      </ul>
+      <p>
+        Мы не запрашиваем данные сверх того, что нужно для работы заявленных функций
+        и ответа на ваши обращения.
+      </p>
+
+      <h2>3. Цели обработки и области доступа (scopes)</h2>
+      <p>Доступ через Google OAuth / Apps Script используется для следующих целей:</p>
+      <ul>
+        <li><strong>Google Sheets</strong> — чтение и запись данных реестров, параметров и настроек генерации.</li>
+        <li><strong>Google Docs</strong> — работа с шаблонами и создание/заполнение итоговых документов.</li>
+        <li><strong>Google Drive</strong> — создание, копирование и сохранение файлов документов в вашем Drive.</li>
+        <li><strong>Отправка почты</strong> — доставка запросов поддержки и лицензии на адрес оператора
+          (по вашей инициативе из интерфейса add-on).</li>
+        <li><strong>Интерфейс (UI)</strong> — отображение меню и боковой панели add-on в редакторах Google.</li>
+      </ul>
+      <p>
+        Сервис запрашивает только те разрешения Google, которые необходимы для перечисленных функций.
+        Вы можете отозвать доступ в настройках аккаунта Google в любой момент.
+      </p>
+
+      <h2>4. Где хранятся данные</h2>
+      <ul>
+        <li>
+          Рабочие таблицы, шаблоны и сгенерированные документы остаются в
+          <strong>вашем Google Drive / Google Workspace</strong> (или в Drive организации,
+          если вы работаете в корпоративном аккаунте). Обработка выполняется через
+          <strong>Google Apps Script</strong> от имени вашего аккаунта в рамках выданных разрешений.
+        </li>
+        <li>
+          Сообщения поддержки и запросы лицензии, которые вы отправляете из add-on,
+          поступают на почтовый ящик оператора
+          (<a href="mailto:mycasesexample@gmail.com">mycasesexample@gmail.com</a>)
+          и используются для ответа и учёта лицензий.
+        </li>
+        <li>
+          Метаданные лицензии/установки могут храниться в инфраструктуре оператора,
+          необходимой для проверки статуса лицензии (без продажи персональных данных третьим лицам).
+        </li>
+      </ul>
+
+      <h2>5. Передача третьим лицам и продажа данных</h2>
+      <p>
+        Мы <strong>не продаём</strong> персональные данные. Передача возможна только:
+        (а) инфраструктуре Google в рамках работы Apps Script / Workspace API;
+        (б) если это требуется законом; (в) поставщикам, которые помогают нам оказывать поддержку
+        или обслуживать лицензии, при условии соразмерной защиты данных.
+      </p>
+
+      <h2>6. Сроки хранения</h2>
+      <ul>
+        <li>Данные в ваших Sheets/Docs/Drive хранятся вами; Сервис не забирает их «на сторону»
+          сверх необходимого для текущей операции.</li>
+        <li>Обращения в поддержку и связанные вложения хранятся столько, сколько нужно,
+          чтобы ответить на запрос и вести разумную историю переписки (как правило, до 24 месяцев,
+          если закон не требует иного).</li>
+        <li>Метаданные лицензии — на срок действия лицензии и разумный период после для учёта
+          и разрешения споров.</li>
+      </ul>
+
+      <h2>7. Ваши права</h2>
+      <p>Вы можете:</p>
+      <ul>
+        <li>запросить сведения о данных, которые оператор хранит в связи с поддержкой или лицензией;</li>
+        <li>попросить исправить неточности или удалить обращения/метаданные, если это не противоречит
+          законным основаниям хранения;</li>
+        <li>отозвать доступ add-on к аккаунту Google через
+          <a href="https://myaccount.google.com/permissions" rel="noopener noreferrer" target="_blank">настройки разрешений Google</a>;</li>
+        <li>удалить add-on из Google Workspace / Marketplace.</li>
+      </ul>
+      <p>
+        Для запросов пишите на
+        <a href="mailto:mycasesexample@gmail.com">mycasesexample@gmail.com</a>
+        с темой вроде «Anviva / персональные данные».
+      </p>
+
+      <h2>8. Безопасность</h2>
+      <p>
+        Мы опираемся на средства безопасности Google Workspace и Apps Script и ограничиваем доступ
+        к входящей почте поддержки. Абсолютной гарантии безопасности в интернете не существует;
+        при подозрении на инцидент сообщите нам по указанному адресу.
+      </p>
+
+      <h2>9. Дети</h2>
+      <p>
+        Сервис предназначен для делового использования в Google Workspace и не ориентирован
+        на детей младше 16 лет.
+      </p>
+
+      <h2>10. Изменения политики</h2>
+      <p>
+        Мы можем обновлять эту Политику. Актуальная версия всегда доступна по адресу
+        <a href="https://anviva.ru/privacy.html">https://anviva.ru/privacy.html</a>
+        (English: <a href="https://anviva.ru/privacy-en.html">https://anviva.ru/privacy-en.html</a>).
+        Дата последнего обновления указана в начале страницы.
+      </p>
+
+      <h2>11. Контакты</h2>
+      <p>
+        Anviva · <a href="https://anviva.ru/">https://anviva.ru/</a><br>
+        Поддержка и конфиденциальность:
+        <a href="mailto:mycasesexample@gmail.com">mycasesexample@gmail.com</a>
+      </p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <div class="site-footer__brand">Anviva</div>
+      <nav class="site-footer__links" aria-label="Подвал">
+        <a href="privacy.html" aria-current="page">Конфиденциальность</a>
+        <a href="support.html">Поддержка</a>
+        <a href="privacy-en.html" lang="en" hreflang="en">EN</a>
+        <a href="https://anviva.ru/">anviva.ru</a>
+      </nav>
+      <p class="site-footer__note">Политика для Google Workspace Marketplace / OAuth</p>
+    </div>
+  </footer>
+</body>
+</html>
