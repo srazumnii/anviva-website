@@ -2,7 +2,7 @@ Published mirror for static hosting: https://github.com/srazumnii/anviva-website
 
 # Anviva website
 
-Статический маркетинговый сайт для **Anviva** (Google Workspace Editor Add-on): лендинг, политика конфиденциальности, условия использования и поддержка.
+Статический маркетинговый сайт для **Anviva DocGen** (Google Workspace Editor Add-on): лендинг, политика конфиденциальности, условия использования и поддержка.
 
 Сборка не нужна — достаточно выложить содержимое этой папки на любой static host и привязать домен `anviva.ru`.
 
