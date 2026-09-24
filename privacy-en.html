@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy — Anviva DocGen</title>
-  <meta name="description" content="Anviva DocGen Privacy Policy: data processing for the Google Workspace Add-on and OAuth.">
+  <meta name="description" content="Anviva DocGen Privacy Policy: Access, Use, Transfer, Protect, and Retention of Google Workspace Add-on data.">
   <link rel="canonical" href="https://anviva.ru/privacy-en.html">
   <link rel="alternate" hreflang="ru" href="https://anviva.ru/privacy.html">
   <link rel="alternate" hreflang="en" href="https://anviva.ru/privacy-en.html">
@@ -26,6 +26,7 @@
     <nav class="nav" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="privacy-en.html" aria-current="page">Privacy</a>
+      <a href="limited-use-en.html">Limited Use</a>
       <a href="terms-en.html">Terms</a>
       <a href="support-en.html">Support</a>
       <a href="privacy.html" lang="ru" hreflang="ru">RU</a>
@@ -35,15 +36,19 @@
   <main id="main" class="wrap">
     <header class="page-hero">
       <h1>Privacy Policy</h1>
-      <p class="meta">Operator: Anviva · Site: <a href="https://anviva.ru/">anviva.ru</a> · Last updated: August 29, 2026</p>
+      <p class="meta">Operator: Anviva · Site: <a href="https://anviva.ru/">anviva.ru</a> · Last updated: September 10, 2026</p>
     </header>
 
     <article class="prose">
       <p>
         This Policy describes what data is processed when you use the
-        Google Workspace Editor Add-on <strong>Anviva DocGen</strong> (the “Service”)
-        and related pages on anviva.ru. It is intended for Google Workspace Marketplace
-        users and OAuth access scenarios involving Google APIs.
+        Google Workspace™ Editor Add-on <strong>Anviva DocGen</strong> (the “Service”)
+        and related pages on anviva.ru. It is intended for Google Workspace™ Marketplace
+        users and OAuth access involving Google APIs.
+      </p>
+      <p>
+        Limited Use of Google API data is described on the
+        <a href="limited-use-en.html">Limited Use</a> page.
       </p>
 
       <h2>1. Operator</h2>
@@ -53,120 +58,103 @@
         (anviva.ru domain).
       </p>
 
-      <h2>2. What data we process</h2>
-      <p>Depending on the features you use, the Service may process:</p>
+      <h2>2. Access</h2>
+      <p>Via OAuth / Apps Script the Service can access only what the add-on needs:</p>
       <ul>
-        <li><strong>Email address</strong> of the Google account you are signed in with.</li>
-        <li><strong>Contents of spreadsheets and documents</strong> in Google Sheets / Google Docs / Drive files
-          to which you explicitly grant the Service access (for document generation, reading templates,
-          field masks, registries, and related settings).</li>
-        <li><strong>License and trial metadata</strong> (status, installation identifiers,
-          validity periods needed for license checks).</li>
-        <li><strong>Support request contents</strong> that you submit via add-on forms
-          (“Support”, “Request license”): for example organization name, message text,
-          and optionally an attachment (screenshot or log excerpt).</li>
+        <li>The <strong>current Google Sheets™ spreadsheet and current Google Docs™ document</strong> where the add-on is open.</li>
+        <li><strong>Google Drive™ files the add-on created</strong> (template copies, generated documents, PDFs, images uploaded from the sidebar) — <code>drive.file</code> scope. This is not access to your entire Drive.</li>
+        <li>The <strong>email address</strong> of the Google account you are signed in with.</li>
+        <li><strong>Support request contents</strong> that you submit via the “Support” and “Request license” forms.</li>
       </ul>
       <p>
-        We do not request data beyond what is needed to provide the stated features
-        and to respond to your inquiries.
+        We do not use Google Picker and we do not read arbitrary Drive files from a pasted ID
+        unless the file was created by the add-on or is the current Sheet/Doc.
       </p>
 
-      <h2>3. Processing purposes and access scopes</h2>
-      <p>Access via Google OAuth / Apps Script is used for the following purposes:</p>
+      <h2>3. Use</h2>
+      <p>Data is used only to provide add-on features:</p>
       <ul>
-        <li><strong>Google Sheets</strong> — reading and writing registry data, parameters, and generation settings.</li>
-        <li><strong>Google Docs</strong> — working with templates and creating/filling final documents.</li>
-        <li><strong>Google Drive</strong> — creating, copying, and saving document files in your Drive.</li>
-        <li><strong>Send email</strong> — delivering support and license requests to the operator
-          (at your initiative from the add-on UI).</li>
-        <li><strong>User interface (UI)</strong> — displaying the add-on menu and sidebar in Google editors.</li>
+        <li>reading registries, directories, and parameters in your spreadsheet;</li>
+        <li>applying masks in a Docs template and creating the finished document / PDF next to the template;</li>
+        <li>saving a template from the current Docs file (“Save template”);</li>
+        <li>uploading images from the add-on sidebar;</li>
+        <li>checking trial and license status;</li>
+        <li>sending your support or license request — only when you submit the form.</li>
       </ul>
       <p>
-        The Service requests only those Google permissions required for the functions listed above.
-        You may revoke access at any time in your Google account settings.
+        Google Workspace™ data is not used to train AI/ML models and is not sold. See
+        <a href="limited-use-en.html">Limited Use</a>.
       </p>
 
-      <h2>4. Where data is stored</h2>
+      <h2>4. Transfer</h2>
+      <p>We <strong>do not sell</strong> personal data. Sharing is limited to:</p>
       <ul>
-        <li>
-          Working spreadsheets, templates, and generated documents remain in
-          <strong>your Google Drive / Google Workspace</strong> (or your organization’s Drive
-          if you use a corporate account). Processing runs through
-          <strong>Google Apps Script</strong> on behalf of your account within the permissions you grant.
-        </li>
-        <li>
-          Support messages and license requests that you send from the add-on
-          go to the operator’s mailbox
-          (<a href="mailto:support@anviva.ru">support@anviva.ru</a>)
-          and are used to reply and to manage licenses.
-        </li>
-        <li>
-          License/installation metadata may be stored in the operator’s infrastructure
-          as needed to verify license status (without selling personal data to third parties).
-        </li>
+        <li><strong>Control</strong> (our license-registry Web App): installation and license metadata
+          (spreadsheet id, trial/license state, dates) — not the contents of your documents.</li>
+        <li><strong>Support:</strong> messages you send from the add-on go to
+          <a href="mailto:support@anviva.ru">support@anviva.ru</a>.</li>
+        <li>Google infrastructure (Apps Script / Google APIs) within the permissions you grant.</li>
+        <li>Where required by law.</li>
       </ul>
-
-      <h2>5. Third-party sharing and sale of data</h2>
       <p>
-        We <strong>do not sell</strong> personal data. Sharing is limited to:
-        (a) Google infrastructure as part of Apps Script / Workspace API operation;
-        (b) where required by law; (c) providers that help us deliver support
-        or manage licenses, subject to proportionate data protection.
+        On Drive the Service works with files the add-on created and with the current Sheet/Doc —
+        not “entire Drive”.
       </p>
 
-      <h2>6. Retention periods</h2>
+      <h2>5. Protect</h2>
+      <p>
+        Processing runs through Google Apps Script on your behalf within OAuth.
+        We rely on Google Workspace™ security controls, limit access to the support inbox,
+        and do not request restricted Drive. Absolute security on the internet cannot be guaranteed;
+        if you suspect an incident, email
+        <a href="mailto:support@anviva.ru">support@anviva.ru</a>.
+      </p>
+
+      <h2>6. Retention and deletion</h2>
       <ul>
-        <li>Data in your Sheets/Docs/Drive is retained by you; the Service does not take it “off-platform”
-          beyond what is needed for the current operation.</li>
-        <li>Support inquiries and related attachments are kept as long as needed
-          to respond and maintain a reasonable correspondence history (typically up to 24 months,
-          unless law requires otherwise).</li>
-        <li>License metadata — for the license term plus a reasonable period afterward for accounting
-          and dispute resolution.</li>
+        <li>Spreadsheets, templates, and generated files remain in <strong>your</strong> Google Drive™ / Google Workspace™; the Service does not take them off-platform beyond the current operation.</li>
+        <li>License metadata in Control — for the license term plus a reasonable period afterward (accounting, disputes).</li>
+        <li>Support inquiries — typically up to 24 months, unless law requires otherwise.</li>
+      </ul>
+      <p>You may:</p>
+      <ul>
+        <li>revoke add-on access in
+          <a href="https://myaccount.google.com/permissions" rel="noopener noreferrer" target="_blank">Google permission settings</a>;</li>
+        <li>uninstall the add-on and delete files in your Drive;</li>
+        <li>ask us to delete support messages and license metadata by emailing
+          <a href="mailto:support@anviva.ru">support@anviva.ru</a>
+          with the subject “Anviva DocGen / personal data”.</li>
       </ul>
 
       <h2>7. Your rights</h2>
-      <p>You may:</p>
-      <ul>
-        <li>request information about data the operator holds in connection with support or licensing;</li>
-        <li>ask to correct inaccuracies or delete inquiries/metadata where this does not conflict with
-          lawful retention grounds;</li>
-        <li>revoke the add-on’s access to your Google account via
-          <a href="https://myaccount.google.com/permissions" rel="noopener noreferrer" target="_blank">Google permission settings</a>;</li>
-        <li>uninstall the add-on from Google Workspace / Marketplace.</li>
-      </ul>
       <p>
-        For requests, email
-        <a href="mailto:support@anviva.ru">support@anviva.ru</a>
-        with a subject such as “Anviva DocGen / personal data”.
+        You may request information about data the operator holds in connection with support or licensing,
+        and ask to correct inaccuracies where this does not conflict with lawful retention grounds.
       </p>
 
-      <h2>8. Security</h2>
+      <h2>8. Children</h2>
       <p>
-        We rely on Google Workspace and Apps Script security controls and limit access
-        to the support inbox. Absolute security on the internet cannot be guaranteed;
-        if you suspect an incident, contact us at the address above.
-      </p>
-
-      <h2>9. Children</h2>
-      <p>
-        The Service is intended for business use in Google Workspace and is not directed
+        The Service is intended for business use in Google Workspace™ and is not directed
         at children under 16.
       </p>
 
-      <h2>10. Policy changes</h2>
+      <h2>9. Policy changes</h2>
       <p>
-        We may update this Policy. The current version is always available at
+        The current version is always available at
         <a href="https://anviva.ru/privacy-en.html">https://anviva.ru/privacy-en.html</a>
         (Russian: <a href="https://anviva.ru/privacy.html">https://anviva.ru/privacy.html</a>).
         The last-updated date is shown at the top of this page.
       </p>
 
-      <h2>11. Contact</h2>
+      <h2>10. Contact</h2>
       <p>
         Anviva · <a href="https://anviva.ru/">https://anviva.ru/</a><br>
         Support and privacy:
         <a href="mailto:support@anviva.ru">support@anviva.ru</a>
+      </p>
+
+      <p class="meta">
+        Google, Google Sheets™, Google Docs™, Google Drive™, and Google Workspace™ are trademarks of Google LLC.
       </p>
     </article>
   </main>
@@ -176,6 +164,7 @@
       <div class="site-footer__brand">Anviva DocGen</div>
       <nav class="site-footer__links" aria-label="Footer">
         <a href="privacy-en.html" aria-current="page">Privacy</a>
+        <a href="limited-use-en.html">Limited Use</a>
         <a href="terms-en.html">Terms</a>
         <a href="support-en.html">Support</a>
         <a href="privacy.html" lang="ru" hreflang="ru">RU</a>

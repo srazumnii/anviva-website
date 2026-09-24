@@ -2,7 +2,7 @@ Published mirror for static hosting: https://github.com/srazumnii/anviva-website
 
 # Anviva website
 
-Статический маркетинговый сайт для **Anviva DocGen** (Google Workspace Editor Add-on): лендинг, политика конфиденциальности, условия использования и поддержка.
+Статический маркетинговый сайт для **Anviva DocGen** (Google Workspace Editor Add-on): лендинг, политика конфиденциальности, Limited Use, условия использования и поддержка.
 
 Сборка не нужна — достаточно выложить содержимое этой папки на любой static host и привязать домен `anviva.ru`.
 
@@ -13,6 +13,8 @@ Published mirror for static hosting: https://github.com/srazumnii/anviva-website
 | `index.html` | Лендинг |
 | `privacy.html` | Политика конфиденциальности (RU) |
 | `privacy-en.html` | Privacy Policy (EN, Marketplace / OAuth) |
+| `limited-use.html` | Limited Use (RU) |
+| `limited-use-en.html` | Limited Use (EN, OAuth / GWM) |
 | `terms.html` | Условия использования (RU) |
 | `terms-en.html` | Terms of Service (EN, Marketplace) |
 | `support.html` | Поддержка и FAQ (RU) |
@@ -28,6 +30,7 @@ Published mirror for static hosting: https://github.com/srazumnii/anviva-website
 |------|-----|
 | Homepage | `https://anviva.ru/` или `https://anviva.ru/index.html` |
 | Privacy policy | `https://anviva.ru/privacy-en.html` (EN; RU: `https://anviva.ru/privacy.html`) |
+| Limited Use | `https://anviva.ru/limited-use-en.html` (EN; RU: `https://anviva.ru/limited-use.html`) |
 | Terms of Service | `https://anviva.ru/terms-en.html` (EN, for Google review; RU: `https://anviva.ru/terms.html`) |
 | Support | `https://anviva.ru/support-en.html` (EN; RU: `https://anviva.ru/support.html`) |
 
@@ -54,6 +57,7 @@ server {
 
   # optional pretty paths
   location = /privacy { return 301 /privacy.html; }
+  location = /limited-use { return 301 /limited-use.html; }
   location = /terms { return 301 /terms.html; }
   location = /support { return 301 /support.html; }
 }
