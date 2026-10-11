@@ -387,10 +387,10 @@ button:focus-visible {
   --r: 5deg;
 }
 
-/* Reveal motion */
+/* Reveal motion — never start at opacity:0 (OAuth/brand crawlers often skip CSS animation) */
 .reveal {
-  opacity: 0;
-  transform: translateY(14px);
+  opacity: 1;
+  transform: translateY(10px);
   animation: reveal-up 0.9s ease forwards;
 }
 
