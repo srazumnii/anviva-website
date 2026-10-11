@@ -10,7 +10,8 @@ Published mirror for static hosting: https://github.com/srazumnii/anviva-website
 
 | Файл | Назначение |
 |------|------------|
-| `index.html` | Лендинг |
+| `index.html` | Лендинг (RU) |
+| `index-en.html` | Homepage (EN, OAuth Branding / Google review) |
 | `privacy.html` | Политика конфиденциальности (RU) |
 | `privacy-en.html` | Privacy Policy (EN, Marketplace / OAuth) |
 | `limited-use.html` | Limited Use (RU) |
@@ -28,7 +29,8 @@ Published mirror for static hosting: https://github.com/srazumnii/anviva-website
 
 | Поле | URL |
 |------|-----|
-| Homepage | `https://anviva.ru/` или `https://anviva.ru/index.html` |
+| Homepage (OAuth Branding) | `https://anviva.ru/index-en.html` |
+| Homepage (RU) | `https://anviva.ru/` |
 | Privacy policy | `https://anviva.ru/privacy-en.html` (EN; RU: `https://anviva.ru/privacy.html`) |
 | Limited Use | `https://anviva.ru/limited-use-en.html` (EN; RU: `https://anviva.ru/limited-use.html`) |
 | Terms of Service | `https://anviva.ru/terms-en.html` (EN, for Google review; RU: `https://anviva.ru/terms.html`) |

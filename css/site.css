@@ -535,6 +535,21 @@ button:focus-visible {
   font-size: 0.95rem;
 }
 
+.compliance {
+  max-width: 42rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.compliance p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.compliance a {
+  font-weight: 600;
+}
+
 /* —— Inner pages —— */
 .page-hero {
   padding: 2.5rem 0 1.5rem;
