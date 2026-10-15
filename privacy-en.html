@@ -39,7 +39,7 @@
       <p class="meta">
         App: <strong>Anviva DocGen</strong> · Operator: Anviva · Site:
         <a href="https://anviva.ru/index-en.html">anviva.ru</a> ·
-        Last updated: October 11, 2026
+        Last updated: October 15, 2026
       </p>
     </header>
 
@@ -229,11 +229,37 @@
 
       <h2>8. Security</h2>
       <p>
-        Processing runs through Google Apps Script on your behalf within OAuth. We rely on Google
-        Workspace™ platform controls, use least-privilege scopes (<code>drive.file</code> instead of
-        full Drive), limit access to the support inbox, and protect Control access with application
-        authentication. No method of transmission or storage is 100% secure; if you suspect an
-        incident, contact <a href="mailto:support@anviva.ru">support@anviva.ru</a>.
+        Security procedures are in place to protect the confidentiality of your data.
+        We use encryption and access controls to protect Google user data as follows:
+      </p>
+      <ul>
+        <li>
+          <strong>Encryption in transit:</strong> communication with Google APIs and with our
+          license-registry Web App (Control) uses HTTPS / TLS.
+        </li>
+        <li>
+          <strong>Encryption and isolation at rest:</strong> Sheets, Docs, Drive files, and most
+          processing stay in your Google Workspace™ / Google Drive™ under Google’s platform
+          security. Document contents are not copied to Anviva-owned databases.
+        </li>
+        <li>
+          <strong>Least-privilege OAuth:</strong> the add-on requests only the scopes needed
+          (including <code>drive.file</code>, not restricted full Drive). Access is limited to the
+          current Sheet/Doc and files the add-on created.
+        </li>
+        <li>
+          <strong>Authenticated Control API:</strong> license metadata requests to Control are
+          integrity-protected (HMAC) and tied to a verified Google OAuth access token for the
+          signed-in account.
+        </li>
+        <li>
+          <strong>Access control:</strong> support mailbox and operator tools are limited to
+          authorized Anviva personnel; Google Workspace data is not sold or used for advertising.
+        </li>
+      </ul>
+      <p>
+        No method of transmission or storage is 100% secure; if you suspect an incident, contact
+        <a href="mailto:support@anviva.ru">support@anviva.ru</a>.
       </p>
 
       <h2>9. Your rights</h2>
