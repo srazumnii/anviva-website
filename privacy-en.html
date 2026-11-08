@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -39,7 +39,7 @@
       <p class="meta">
         App: <strong>Anviva DocGen</strong> · Operator: Anviva · Site:
         <a href="https://anviva.ru/index-en.html">anviva.ru</a> ·
-        Last updated: October 15, 2026
+        Last updated: November 8, 2026
       </p>
     </header>
 
@@ -103,17 +103,20 @@
         </li>
       </ul>
       <p>
-        We do not use Google Picker. We do not request restricted full-Drive scopes. We do not read
-        arbitrary Drive files from a pasted file ID unless the file was created by the add-on or is
-        the currently open Sheet/Doc.
+        When a feature needs another file (for example, linking a Docs template to your working
+        spreadsheet, or granting access to a shared template), the add-on opens the
+        <strong>Google Picker</strong> and you choose that one file yourself. Access is granted
+        per file under <code>drive.file</code>. We do not request restricted full-Drive scopes and
+        we do not read arbitrary Drive files from a pasted file ID unless the file was created by the
+        add-on, is the currently open Sheet/Doc, or was explicitly selected by you in the Picker.
       </p>
 
       <h2>3. OAuth scopes (how access is granted)</h2>
       <p>Anviva DocGen requests only the scopes needed for user-facing features:</p>
       <ul>
-        <li><code>https://www.googleapis.com/auth/spreadsheets</code> — read/write the working spreadsheet.</li>
-        <li><code>https://www.googleapis.com/auth/documents</code> — read/write Docs templates and generated Docs.</li>
-        <li><code>https://www.googleapis.com/auth/drive.file</code> — files the user opens with the add-on or that the add-on creates.</li>
+        <li><code>https://www.googleapis.com/auth/spreadsheets.currentonly</code> — read/write the spreadsheet in which the add-on is currently open.</li>
+        <li><code>https://www.googleapis.com/auth/documents.currentonly</code> — read/write the document in which the add-on is currently open.</li>
+        <li><code>https://www.googleapis.com/auth/drive.file</code> — files the add-on creates (generated Docs/PDFs/Sheets, template copies, uploaded images) and files you select in the Google Picker (linked workbook, templates).</li>
         <li><code>https://www.googleapis.com/auth/script.container.ui</code> — menus and sidebars in Sheets/Docs.</li>
         <li><code>https://www.googleapis.com/auth/userinfo.email</code> — signed-in user’s email for licensing and support.</li>
         <li><code>https://www.googleapis.com/auth/script.send_mail</code> — send support / license-request messages you submit.</li>
@@ -244,8 +247,9 @@
         </li>
         <li>
           <strong>Least-privilege OAuth:</strong> the add-on requests only the scopes needed
-          (including <code>drive.file</code>, not restricted full Drive). Access is limited to the
-          current Sheet/Doc and files the add-on created.
+          (<code>spreadsheets.currentonly</code>, <code>documents.currentonly</code>,
+          <code>drive.file</code>; not restricted full Drive). Access is limited to the current
+          Sheet/Doc, files the add-on created, and files you explicitly select in the Google Picker.
         </li>
         <li>
           <strong>Authenticated Control API:</strong> license metadata requests to Control are

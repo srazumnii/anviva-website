@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="utf-8">
@@ -36,7 +36,7 @@
   <main id="main" class="wrap">
     <header class="page-hero">
       <h1>Политика конфиденциальности</h1>
-      <p class="meta">Оператор: Anviva · Сайт: <a href="https://anviva.ru/">anviva.ru</a> · Обновлено: 15 октября 2026 г.</p>
+      <p class="meta">Оператор: Anviva · Сайт: <a href="https://anviva.ru/">anviva.ru</a> · Обновлено: 8 ноября 2026 г.</p>
     </header>
 
     <article class="prose">
@@ -63,12 +63,12 @@
       <p>Через OAuth / Apps Script Сервис получает доступ только к тому, что нужно для add-on:</p>
       <ul>
         <li><strong>Текущая таблица Google Sheets и текущий документ Google Docs</strong>, в которых открыт add-on.</li>
-        <li><strong>Файлы Google Drive, которые создал сам add-on</strong> (копии шаблонов, сгенерированные документы, PDF, загруженные из панели изображения) — scope <code>drive.file</code>. Это не доступ ко всему Диску.</li>
+        <li><strong>Файлы Google Drive, которые создал сам add-on</strong> (копии шаблонов, сгенерированные документы, PDF, загруженные из панели изображения) <strong>или которые вы сами выбрали в окне Google Picker</strong> (рабочая таблица для шаблона Docs, шаблоны) — scope <code>drive.file</code>. Это не доступ ко всему Диску.</li>
         <li><strong>Адрес электронной почты</strong> аккаунта Google, под которым вы авторизованы.</li>
         <li><strong>Содержимое обращений</strong>, которое вы сами отправляете через формы «Техподдержка» и «Запросить лицензию».</li>
       </ul>
       <p>
-        Мы не используем Google Picker и не читаем произвольные файлы Диска по вставленному ID, если файл не создан add-on и не является текущим Sheet/Doc.
+        Когда функции нужен другой файл (привязать таблицу к шаблону Docs, дать доступ к общему шаблону), add-on открывает окно Google Picker, и вы сами выбираете этот один файл — доступ выдаётся только к нему. Мы не запрашиваем полный доступ к Диску и не читаем произвольные файлы по вставленному ID, если файл не создан add-on, не является текущим Sheet/Doc и не выбран вами в Picker.
       </p>
 
       <h2>3. Use — как используются данные</h2>
@@ -118,8 +118,9 @@
         </li>
         <li>
           <strong>Минимальные OAuth-права:</strong> add-on запрашивает только нужные scopes
-          (включая <code>drive.file</code>, без restricted полного Диска). Доступ ограничен текущим
-          Sheet/Doc и файлами, которые создал сам add-on.
+          (<code>spreadsheets.currentonly</code>, <code>documents.currentonly</code>,
+          <code>drive.file</code>; без restricted полного Диска). Доступ ограничен текущим
+          Sheet/Doc, файлами, которые создал сам add-on, и файлами, выбранными вами в Google Picker.
         </li>
         <li>
           <strong>Аутентифицированный API Control:</strong> запросы метаданных лицензии защищены
